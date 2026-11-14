@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cuj51bxb6pjsf"]
+
+[ext_resource type="Texture2D" uid="uid://dvvkr4du4e21u" path="res://assets/bars.png" id="1_pfixm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6eosy"]
+texture = ExtResource("1_pfixm")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_w66qq"]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_6eosy")
+
+[node name="Bars" type="TileMapLayer" unique_id=898165170]
+tile_set = SubResource("TileSet_w66qq")

@@ -1,0 +1,208 @@
+# Kedves Kornél, ezeket kéne megcsinálnod
+## **Karakterek**
+- *Arthur*
+    - Főszereplő
+    - nagypapper
+    - eléggé fontos szereplő sztem
+    - utf-8 kérései
+        - IDE
+
+## **Tárgyak, egyéb dolgok**
+- **Prologue - Chapter 0**
+    - *Kulcs*
+        - utf-8 kérései
+            - IDE
+    - *Ajtó*
+        - utf-8 kérései
+            - IDE
+    - *Szerszámos láda*
+        - nem parkside-os
+        - régi
+        - utf-8 kérései
+            - IDE
+    - *Ágyú*
+        - ez lesz a legendás ágyúamit mindenhol fogunk látni
+        - ikonikus legyen
+        - utf-8 kérései
+            - IDE
+- **The Abandoned Island - Chapter1**
+    - *Térkép*
+        - kicsi térkép ami az ajtómellett a kijáratnál lesz
+        - a sziget különbözőpontjait megjelöli meg magaa szigetet
+        - utf 8 kérései
+            - IDE
+    - *Rope (kötél)*
+        - majd az "erdő" hátterenlesz, egy fa mellett
+        - nem kell nagynak lennie
+        - ilyen feltekert legyen
+        - utf 8 kérései
+            - IDE
+    - *Rusty Key (rozsdáskulcs)*
+        - az elhagyatott raktárbalesz
+        - lehet a sima kulcsújraszínezve, réz anyaglegyen
+        - utf 8 kérései
+            - IDE
+    - *Metal Handle*
+        - a világítótoronyban lesz
+        - nem különleges, sima handle
+        - utf 8 kérései
+            - IDE
+- **Something Is Wrong - Chapter 2**
+    - *Old Journal*
+        - egy régi könyv
+        - a világítótoronyba található
+        - egy korábbi szökést ábrázol
+        - utf 8 gondolatai
+            - IDE
+    - *Fuse*
+        - a raktárházban található
+        - világítótoronyhoz kell
+        - utf 8 gondolatait kérem
+            - IDE
+    - *Candle*
+        - a világítótorony bejáratánál található
+        - egyszerű candle, semmi komoly
+        - utf 8 gondolatai
+            - IDE
+- **The Truth - Chapter 3**
+    - *Old Photograph*
+        - a titkos bunkerben található az asztalon
+        - utf 8 gondolatai
+            - IDE
+    - *Diary Page*
+        - a titkos bunkerben egy szekrényben található
+        - utf 8 gondolatai
+            - IDE
+    - *Cannon Blueprint*
+        - a titkos bunkerben található a földön
+        - megmutatja az ágyú működését
+        - utf 8 gondolatai
+            - IDE
+- **Finale - Chapter 4**
+    - *Ship Wheel*
+        - A világítótorony egyik szobájában van
+        - utf 8 gondolatai
+            - IDE
+    - *Sail*
+        - A titkos bunkerben található
+        - utf 8 gondolatai
+            - IDE
+    - *Engine Part*
+        - A titkos bunkerben található
+        - utf 8 gondolatai
+            - IDE
+    - *Hajó*
+        - A jó állapotban lévő verzió
+        - utf 8 gondolatai
+            - IDE
+
+## **Hátterek**
+- **Prologue - Chapter 0**
+    - *Börtöncella*
+        - szokásos börtöncella feeling
+        - utf-8 kérései
+            - IDE
+    - *Börtönfolyosó*
+        - hosszú folyosó ami lehet ismételhetőtextúra -> kevesebb szenvedés
+        - utf-8 kérései
+            - IDE
+    - *Őrszoba*
+        - ajtón keresztül lehet bejutni
+        - szokásos őrszoba
+        - nem a FNAF-os
+        - utf-8 kérései
+            - IDE
+    - *Udvar*
+        - nem kell nagynak lennie
+        - a végén egy cliff ahová fog majdkerülni az ágyú
+        - a tenger is látszódjón, nem kellmeganimálni a tengert
+        - utf-8 kérései
+            - IDE
+- **The Abandoned Island - Chapter1**
+    - *Börtöncella*
+        - ugyanaz mint a CH0-bancsak az elrendezése egypicit más, de sokat neváltozzon
+        - és az ajtó nyitva
+        - utf 8 kérései
+            - IDE
+    - *Erdő*
+        - nem kell nagynak lennie
+        - itt lesz a "kötél" itemegy fa mellett
+        - utf 8 kérései
+            - IDE
+    - *Raktárépület*
+        - régi
+        - nem kell túl nagynak lennie
+        - emeletes rack-ek araktárépülethatásért
+        - itt lesz a "rusty key"item egyik sarokba
+        - utf 8 kérései
+            - IDE
+    - *Világítótorony - külső*
+        - egy nagy világitó torony
+        - magas
+        - régi
+        - elhagyatott
+        - utf 8 kérései
+            - IDE
+    - *Világítótorony - belső*
+        - lépcső aztán a kabin
+        - és ott lesz elrejtve a"metal handle" item
+        - utf 8 kérése
+            - IDE
+    - *Leszakadt fahíd*
+        - ez a puzzle rész
+        - ha mindent összegyűjtött ajátékos akkor ér el ide
+        - mindent egybe kell rakniés akkor tudja a játékosösszearakni a hidat
+        - utf 8 kérései
+            - IDE
+    - *A kikötő*
+        - ez csak egy kis része akikötőnek
+        - ott talál egy hajót Arthur
+        - és a hajót nem tudjamegjavítani mert nincsenekmeg hozzá az eszközei
+        - ott van a hajó mellett azágyú
+        - és kilövi magát az ágyúból
+        - utf 8 kérései
+            - IDE
+- **Something Is Wrong - Chapter 2**
+    - *Börtöncella*
+        - hasonlít a CH1-re de nem ugyanaz
+        - egykét eltérésnek kell lennie
+        - börtön ajtaja megint nyitva
+        - az asztalon van egy papír
+        - utf 8 kérései
+            - IDE
+    - *Erdő*
+        - a tárgy ami benne van máshol van elhelyezve egy picit
+        - utf 8 gondolatai
+            - IDE
+    - *Fahíd*
+        - mostmár nincs leszakadva és simán el lehet érni
+        - utf 8 kérései
+            - IDE
+    - *Világítótorony*
+        - az ajtó nyitva és simán be lehet jutni
+        - most a puzzle itt lesz
+        - be kell inditani az elektromos rendszerét a világítóháznak
+        - a bejáratnál lesz a candle
+        - az old journal is itt lesz
+        - utf 8 gondolatai
+            - IDE
+    - *Világítótorony - felső erkély*
+        - kimegy arthur és ott van megint egy ágyú
+        - az ágyú a tenger felé van fordítva
+        - utf 8 gondolatai
+            - IDE
+- **The Truth - Chapter 3**
+    - *Titkos bunker*
+        - a raktár alatt van
+        - egy bejárat kinyílik a földből
+        - sok helyen megtalálható arthur neve
+        - a bunkerbe is van egy ágyú ami a falba lövi Arthurt
+        - utf 8 gnodolatai
+            - IDE
+- **Finale - Chapter 4**
+    - *Kikötő*
+        - itt van a tönkretett hajó
+        - itt kell megjavitani a hajót
+        - ez már a teljes kikötő, nem a korlátozott ami korábban van a játékban
+        - utf 8 gondolatai
+            - IDE

@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://be3x8dqnp48tt"]
+
+[ext_resource type="Script" uid="uid://crx3p5vx40qf3" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dbml15rso2wt0" path="res://assets/Arthur.png" id="2_g2els"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8vuu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}],
+"loop": 0,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c10ig"]
+radius = 14.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1447740648]
+z_index = 10
+collision_layer = 2
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=519396375]
+position = Vector2(-1, -15)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=11021069]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_u8vuu")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Timer" type="Timer" parent="." unique_id=730375942]
+wait_time = 0.2
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=870258338]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1252804583]
+position = Vector2(-1, -14)
+shape = SubResource("CircleShape2D_c10ig")
+
+[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
+[connection signal="area_exited" from="PickupArea" to="." method="_on_pickup_area_area_exited"]

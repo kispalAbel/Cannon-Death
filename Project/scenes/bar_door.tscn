@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dwoitu6l8iqx6"]
+
+[ext_resource type="Script" uid="uid://b5ukjykmflk5i" path="res://scripts/bar_door.gd" id="1_2asgt"]
+[ext_resource type="Texture2D" uid="uid://den45jmy7xss2" path="res://assets/bar_doors.png" id="1_g3n7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3n7j"]
+size = Vector2(34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2asgt"]
+atlas = ExtResource("1_g3n7j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5avjv"]
+atlas = ExtResource("1_g3n7j")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrmym"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2asgt")
+}],
+"loop": 0,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5avjv")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2asgt"]
+size = Vector2(40, 38)
+
+[node name="BarDoor" type="Node2D" unique_id=1920878831]
+script = ExtResource("1_2asgt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1881452538]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=397871967]
+shape = SubResource("RectangleShape2D_g3n7j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=462524426]
+sprite_frames = SubResource("SpriteFrames_hrmym")
+animation = &"open"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1211896853]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1956209393]
+shape = SubResource("RectangleShape2D_2asgt")

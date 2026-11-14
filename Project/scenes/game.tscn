@@ -1,0 +1,106 @@
+[gd_scene format=4 uid="uid://d1vi6kn67itve"]
+
+[ext_resource type="Script" uid="uid://c6arkgygrec7e" path="res://scripts/global.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://be3x8dqnp48tt" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b4gheu51vl1fx" path="res://scenes/hotbar_ui.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://cm0rfi422oe8e" path="res://scenes/tile_map_layer.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://d0pu5nqpdykpl" path="res://scenes/door.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://6ovq2o4wilc6" path="res://scenes/item_object.tscn" id="6_u5sy4"]
+[ext_resource type="Resource" uid="uid://dcjrbj6dpxe8u" path="res://items/Key.tres" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://dwoitu6l8iqx6" path="res://scenes/bar_door.tscn" id="8_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cuj51bxb6pjsf" path="res://scenes/bars.tscn" id="9_vtaks"]
+[ext_resource type="Script" uid="uid://dsuvy4prnt2uo" path="res://scripts/game_over_area.gd" id="10_kvpfn"]
+[ext_resource type="Resource" uid="uid://cfvpbdid2y3tk" path="res://items/RustyKey.tres" id="10_vtaks"]
+[ext_resource type="FontFile" uid="uid://bsm2nb6ueg1xr" path="res://fonts/PixelOperator8.ttf" id="12_dinhu"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c10ig"]
+distance = -175.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b3137"]
+distance = -157.0
+
+[node name="Game" type="Node2D" unique_id=928892166 node_paths=PackedStringArray("main_level")]
+script = ExtResource("1_lbhrr")
+main_level = NodePath("Levels/1")
+
+[node name="HotbarUI" parent="." unique_id=962594149 instance=ExtResource("2_iywne")]
+
+[node name="Levels" type="Node" parent="." unique_id=1979458411]
+
+[node name="-1" parent="Levels" unique_id=228936146 instance=ExtResource("2_yqjtg")]
+position = Vector2(-1, -688)
+tile_map_data = PackedByteArray("AAD+////AAAAAAAAAAD8/wAAAQAAAAAAAAD9/wAAAQAAAAAAAAD+/wAAAQAAAAAAAAD//wAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAA=")
+
+[node name="Door" parent="Levels/-1" unique_id=206935979 instance=ExtResource("3_lnu2h")]
+position = Vector2(80, -12)
+block_players = false
+item_required = true
+required_item = ExtResource("7_gee14")
+remove_used_item = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/-1" unique_id=449493729]
+shape = SubResource("WorldBoundaryShape2D_c10ig")
+
+[node name="1" parent="Levels" unique_id=274172175 instance=ExtResource("2_yqjtg")]
+tile_map_data = PackedByteArray("AAD+////AQAIAAAAAAD3//3/AQAIAAAAAAD3//7/AQAGAAEAAFD3////AQAGAAEAAFD3/wAAAQAIAAAAAAD4//3/AQAGAAEAADD4//7/AQAIAAAAAAD4////AQAIAAEAAAD4/wAAAQAGAAEAAAD5//3/AQAGAAEAADD5//7/AQAIAAAAAAD5////AQAIAAEAAAD5/wAAAQAGAAEAAAD6//3/AQAGAAEAADD6//7/AQAIAAEAAAD6////AQAIAAAAAAD6/wAAAQAGAAEAAAD7//3/AQAGAAEAADD7//7/AQAIAAAAAAD8//3/AQAGAAEAADD8//7/AQAIAAEAAAD9//3/AQAGAAEAADD9//7/AQAIAAAAAAD+//3/AQAGAAEAADD+//7/AQAIAAEAAAD+/wAAAQAGAAEAAAD///3/AQAGAAEAADD///7/AQAIAAAAAAD/////AQAIAAEAAAD//wAAAQAGAAEAAAAAAP3/AQAGAAEAADAAAP7/AQAIAAEAAAAAAP//AQAIAAAAAAAAAAAAAQAGAAEAAAABAP3/AQAGAAEAADABAP7/AQAIAAEAAAABAP//AQAIAAEAAAABAAAAAQAGAAEAAAACAP3/AQAGAAEAADACAP7/AQAIAAEAAAACAP//AQAIAAEAAAACAAAAAQAGAAEAAAADAP3/AQAGAAEAADADAP7/AQAIAAAAAAADAP//AQAIAAEAAAADAAAAAQAGAAEAAAAEAP3/AQAGAAEAADAEAP7/AQAIAAEAAAAEAP//AQAIAAEAAAAEAAAAAQAGAAEAAAAFAP3/AQAIAAAAAAAFAP7/AQAGAAEAAGAFAP//AQAGAAEAAGAFAAAAAQAIAAAAAAD7////AQAIAAAAAAD7/wAAAQAGAAEAAAD8////AQAIAAEAAAD8/wAAAQAGAAEAAAD9////AQAIAAEAAAD9/wAAAQAGAAEAAAA=")
+
+[node name="Key" parent="Levels/1" unique_id=1173034081 instance=ExtResource("6_u5sy4")]
+z_index = 9
+position = Vector2(-221, -14)
+item = ExtResource("7_gee14")
+
+[node name="Rusty Key" parent="Levels/1" unique_id=1048189994 instance=ExtResource("6_u5sy4")]
+z_index = 9
+position = Vector2(37, -47)
+item = ExtResource("10_vtaks")
+
+[node name="Door" parent="Levels/1" unique_id=972076157 node_paths=PackedStringArray("scene_to_load") instance=ExtResource("3_lnu2h")]
+position = Vector2(143, -15)
+block_players = false
+item_required = true
+required_item = ExtResource("7_gee14")
+remove_used_item = true
+scene_to_load = NodePath("../../2")
+
+[node name="BarDoor" parent="Levels/1" unique_id=1920878831 instance=ExtResource("8_0tnpc")]
+position = Vector2(-144, -17)
+item_required = true
+required_item = ExtResource("10_vtaks")
+remove_used_item = true
+
+[node name="Bars" parent="Levels/1" unique_id=898165170 instance=ExtResource("9_vtaks")]
+z_index = 20
+tile_map_data = PackedByteArray("AAD5////AQAAAAEAAAD5//7/AQAAAAAAAAD4////AQAAAAEAAAD6////AQAAAAEAAAD6//7/AQAAAAAAAAD4//7/AQAAAAAAAAD7//7/AQAAAAAAAAA=")
+
+[node name="2" parent="Levels" unique_id=738813582 instance=ExtResource("2_yqjtg")]
+tile_map_data = PackedByteArray("AAD8/wAAAQAAAAAAAAD9/wAAAQAAAAAAAAD//wAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAADz/wAAAQAAAAAAAADz/wEAAQABAAAAAADz/wIAAQABAAAAAADz/wMAAQABAAAAAAD0/wAAAQAAAAAAAAD0/wEAAQABAAAAAAD0/wIAAQABAAAAAAD0/wMAAQABAAAAAAD1/wAAAQAAAAAAAAD1/wEAAQABAAAAAAD1/wIAAQABAAAAAAD1/wMAAQABAAAAAAD2/wAAAQAAAAAAAAD2/wEAAQABAAAAAAD2/wIAAQABAAAAAAD2/wMAAQABAAAAAAD3/wAAAQAAAAAAAAD3/wEAAQABAAAAAAD3/wIAAQABAAAAAAD3/wMAAQABAAAAAAD4/wAAAQAAAAAAAAD4/wEAAQABAAAAAAD4/wIAAQABAAAAAAD4/wMAAQABAAAAAAD5/wAAAQAAAAAAAAD5/wEAAQABAAAAAAD5/wIAAQABAAAAAAD5/wMAAQABAAAAAAD6/wAAAQAAAAAAAAD6/wEAAQABAAAAAAD6/wIAAQABAAAAAAD6/wMAAQABAAAAAAD7/wAAAQAAAAAAAAD7/wEAAQABAAAAAAD7/wIAAQABAAAAAAD7/wMAAQABAAAAAAD8/wEAAQABAAAAAAD8/wIAAQABAAAAAAD8/wMAAQABAAAAAAD9/wEAAQABAAAAAAD9/wIAAQABAAAAAAD9/wMAAQABAAAAAAD+/wEAAQABAAAAAAD+/wIAAQABAAAAAAD+/wMAAQABAAAAAAD//wEAAQABAAAAAAD//wIAAQABAAAAAAD//wMAAQABAAAAAAAAAAEAAQABAAAAAAAAAAIAAQABAAAAAAAAAAMAAQABAAAAAAABAAEAAQABAAAAAAABAAIAAQABAAAAAAABAAMAAQABAAAAAAACAAEAAQABAAAAAAACAAIAAQABAAAAAAACAAMAAQABAAAAAAADAAEAAQABAAAAAAADAAIAAQABAAAAAAADAAMAAQABAAAAAAAEAAAAAQAAAAAAAAAEAAEAAQABAAAAAAAEAAIAAQABAAAAAAAEAAMAAQABAAAAAAAFAAAAAQAAAAAAAAAFAAEAAQABAAAAAAAFAAIAAQABAAAAAAAFAAMAAQABAAAAAAAGAAAAAQAAAAAAAAAGAAEAAQABAAAAAAAGAAIAAQABAAAAAAAGAAMAAQABAAAAAAAHAAEAAQAEAAkAAAAHAAIAAQAEAAoAAAAHAAMAAQAEAAoAAAAIAAEAAQAEAAkAAAAIAAIAAQAEAAoAAAAIAAMAAQAEAAoAAAAJAAEAAQAEAAkAAAAJAAIAAQAEAAoAAAAJAAMAAQAEAAoAAAAKAAEAAQAEAAkAAAAKAAIAAQAEAAoAAAAKAAMAAQAEAAoAAAALAAAAAQAAAAAAAAALAAEAAQABAAAAAAALAAIAAQABAAAAAAALAAMAAQABAAAAAAAMAAAAAQAAAAAAAAAMAAEAAQABAAAAAAAMAAIAAQABAAAAAAAMAAMAAQABAAAAAAANAAAAAQAAAAAAAAANAAEAAQABAAAAAAANAAIAAQABAAAAAAANAAMAAQABAAAAAAAOAAAAAQAAAAAAAAAOAAEAAQABAAAAAAAOAAIAAQABAAAAAAAOAAMAAQABAAAAAAAPAAAAAQAAAAAAAAAPAAEAAQABAAAAAAAPAAIAAQABAAAAAAAPAAMAAQABAAAAAAAQAAAAAQAAAAAAAAAQAAEAAQABAAAAAAAQAAIAAQABAAAAAAAQAAMAAQABAAAAAAARAAAAAQAAAAAAAAARAAEAAQABAAAAAAARAAIAAQABAAAAAAARAAMAAQABAAAAAAASAAEAAQAEAAkAAAASAAIAAQAEAAoAAAASAAMAAQAEAAoAAAATAAEAAQAEAAkAAAATAAIAAQAEAAoAAAATAAMAAQAEAAoAAAAUAAEAAQAEAAkAAAAUAAIAAQAEAAoAAAAUAAMAAQAEAAoAAAAVAAEAAQAEAAkAAAAVAAIAAQAEAAoAAAAVAAMAAQAEAAoAAAAWAAEAAQAEAAkAAAAWAAIAAQAEAAoAAAAWAAMAAQAEAAoAAAAXAAEAAQAEAAkAAAAXAAIAAQAEAAoAAAAXAAMAAQAEAAoAAAAYAAEAAQAEAAkAAAAYAAIAAQAEAAoAAAAYAAMAAQAEAAoAAAAZAAEAAQAEAAkAAAAZAAIAAQAEAAoAAAAZAAMAAQAEAAoAAAAaAAEAAQAEAAkAAAAaAAIAAQAEAAoAAAAaAAMAAQAEAAoAAAAbAAEAAQAEAAkAAAAbAAIAAQAEAAoAAAAbAAMAAQAEAAoAAAD+/wAAAQAAAAAAAAA=")
+
+[node name="GameOverArea" type="Area2D" parent="Levels/2" unique_id=2091909265]
+collision_mask = 2
+script = ExtResource("10_kvpfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Levels/2/GameOverArea" unique_id=1138734608]
+shape = SubResource("WorldBoundaryShape2D_b3137")
+
+[node name="Player" parent="." unique_id=1447740648 instance=ExtResource("1_uwrxv")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1340707113]
+offset = Vector2(0, -30)
+zoom = Vector2(4, 4)
+limit_right = 700
+limit_bottom = 120
+limit_smoothed = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D" unique_id=1438382212]
+
+[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer" unique_id=2054816005]
+offset_left = -143.0
+offset_top = -109.0
+offset_right = 139.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("12_dinhu")
+theme_override_font_sizes/font_size = 28
+text = "Game Over! 
+Nyertél! :D"
+horizontal_alignment = 1
+vertical_alignment = 1
